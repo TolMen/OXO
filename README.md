@@ -27,11 +27,11 @@ Suivez les instructions affichées pour naviguer dans le jeu. <br><br>
 <br><br>
 3. **Compiler le projet** <br>
    Si vous utilisez un terminal, compilez le projet en naviguant vers le dossier `src` puis en utilisant `javac` : <br>
-   `javac OXO/OXO.java`
+   `javac morpion/Morpion.java`
 <br><br>
 5. **Exécuter le jeu** <br>
    Une fois compilé, vous pouvez exécuter le jeu avec la commande suivante : <br>
-   `java OXO.OXO`
+   `java morpion.Morpion`
 <br><br>
 ## Améliorations possibles
 
