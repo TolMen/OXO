@@ -1,0 +1,9 @@
+# Ignore NetBeans project-specific files
+nbproject/
+test/
+
+# Ignore build files
+build.xml
+
+# Ignore manifest files if auto-generated
+manifest.mf
