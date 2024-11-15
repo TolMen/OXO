@@ -60,38 +60,35 @@ public class Morpion {
 	return true;
     }
 
+    public static boolean testNumbers(int a, int b, int c, int d) {
+	return (a == b && b == c && c == d);
+    }
+
     public static boolean hasWon(int[][] plateau, int idJoueur) {
-	int size = plateau.length;
-
-	for (int i = 0; i < size; i++) {
-	    if (testArray(plateau[i], idJoueur)) {
+	// Vérification des lignes
+	for (int i = 0; i < 3; i++) {
+	    if (testNumbers(plateau[i][0], plateau[i][1], plateau[i][2], idJoueur)) {
 		return true;
 	    }
 	}
 
-	for (int i = 0; i < size; i++) {
-	    int[] column = new int[size];
-	    for (int j = 0; j < size; j++) {
-		column[j] = plateau[j][i];
-	    }
-	    if (testArray(column, idJoueur)) {
+	// Vérification des colonnes
+	for (int j = 0; j < 3; j++) {
+	    if (testNumbers(plateau[0][j], plateau[1][j], plateau[2][j], idJoueur)) {
 		return true;
 	    }
 	}
 
-	int[] diag1 = new int[size];
-	for (int i = 0; i < size; i++) {
-	    diag1[i] = plateau[i][i];
+	// Vérification des diagonales
+	if (testNumbers(plateau[0][0], plateau[1][1], plateau[2][2], idJoueur)) {
+	    return true;
 	}
-	if (testArray(diag1, idJoueur)) {
+	if (testNumbers(plateau[0][2], plateau[1][1], plateau[2][0], idJoueur)) {
 	    return true;
 	}
 
-	int[] diag2 = new int[size];
-	for (int i = 0; i < size; i++) {
-	    diag2[i] = plateau[i][size - 1 - i];
-	}
-	return testArray(diag2, idJoueur);
+	// Si aucune condition de victoire n'est remplie, retourne false
+	return false;
     }
 
     public static boolean isPlateauFull(int[][] plateau) {
