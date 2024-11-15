@@ -9,7 +9,7 @@ Chaque tour, le joueur indique les coordonnées d’une case à marquer, avec de
 
 ### Comment jouer au jeu ?
 Après avoir lancé le jeu, il vous sera demandé de saisir le nom de chaque joueur, puis la taille du plateau, puis vous pourrez commencer à jouer. <br>
-Suivez les instructions affichées pour naviguer dans le jeu.
+Suivez les instructions affichées pour naviguer dans le jeu. :)
 <br><br>
 ## Installation
 
