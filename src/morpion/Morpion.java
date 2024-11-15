@@ -65,16 +65,13 @@ public class Morpion {
     }
 
     public static boolean hasWon(int[][] plateau, int idJoueur) {
-	// Vérification des lignes
+	// Vérification des lignes et colonnes
 	for (int i = 0; i < 3; i++) {
 	    if (testNumbers(plateau[i][0], plateau[i][1], plateau[i][2], idJoueur)) {
 		return true;
 	    }
-	}
-
-	// Vérification des colonnes
-	for (int j = 0; j < 3; j++) {
-	    if (testNumbers(plateau[0][j], plateau[1][j], plateau[2][j], idJoueur)) {
+	    
+	    if (testNumbers(plateau[0][i], plateau[1][i], plateau[2][i], idJoueur)) {
 		return true;
 	    }
 	}
