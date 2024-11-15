@@ -156,6 +156,7 @@ public class Morpion {
     }
 
     public static void main(String[] args) {
+	System.out.println("");
 	System.out.println("Bienvenue dans Le Morpion Java !");
 	System.out.println("");
 	playGame();
